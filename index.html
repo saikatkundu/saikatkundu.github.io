@@ -6,13 +6,19 @@
     
     <script src="http://code.jquery.com/jquery-1.9.1.js" type="text/javascript"></script>
   <script type="text/javascript">
-    $(function () {
+    /*$(function () {
       $(document).bind('contextmenu', function (e) {
         e.preventDefault();
         alert('Right Click is not allowed');
       });
 
+    });*/
+    
+    $('.disableRightClick').on("contextmenu",function(e){
+        alert('right click disabled');
+        return false;
     });
+    
   </script>    
    
     
@@ -31,7 +37,7 @@
     </style>
     
   </head>  
-  <body>
+  <body class="disableRightClick">
     <div class="top-navigation">
       <h3>Saikat Kundu</h3>
     </div>
